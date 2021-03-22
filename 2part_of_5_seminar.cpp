@@ -15,9 +15,9 @@ void print_vec(std::vector < T > vector)
 {
 	std::for_each(std::begin(vector),
 		std::end(vector),
-		[](auto x) {std::cout « x « ' '; });
+		[](auto x) {std::cout Â« x Â« ' '; });
 
-	std::cout « std::endl;
+	std::cout Â« std::endl;
 }
 
 
@@ -31,8 +31,8 @@ std::cout << "\n\n";
 /*Possible implementation
 int sum = 0;
 std::for_each(std::begin(seq2), std::end(seq2), [&sum](auto x){ sum += x;});
-std::cout « sum « std::endl;
-std::cout « std::endl;
+std::cout Â« sum Â« std::endl;
+std::cout Â« std::endl;
 */
 
 // Eleventh (replacing some first element)
@@ -132,13 +132,19 @@ std::cout <<* (it.first) << ' ' << * (it.second) << std::endl;
 // Twenty (printing all sequences)
 std::vector < std::vector < int > > sequences = { seq1, seq2, seq3, seq4 };
 
-std::cout « "All sequences:\n";
+std::cout Â« "All sequences:\n";
 
 std::for_each(std::begin(sequences),
 	std::end(sequences),
 	[](auto x)
 	{std::for_each(std::begin(x),
 		std::end(x),
-		[](auto y) {std::cout « y « ' '; });
-std::cout « std::endl;
+		[](auto y) {std::cout Â« y Â« ' '; });
+std::cout Â« std::endl;
 	});
+
+int main()
+{
+	return EXIT_SUCCESS;
+}
+	  
